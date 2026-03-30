@@ -243,15 +243,26 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     cursor: pointer;
    }
    details summary::after {
      content: "›";
      font-size: 1.2rem;
+     line-height: 1;
      transition: transform 0.2s ease;
    }
    details[open] summary::after {
      transform: rotate(90deg);
+   }
+ 
+   /* Make icons in Elsewhere dropdown more subtle */
+   .sidebar details a {
+     display: flex;
+     align-items: center;
+     gap: 0.4rem;
+     font-size: 0.85rem;
+   }
+   .sidebar details a {
+     font-size: 0.85rem;
    }
  </style>
 </head>
@@ -300,13 +311,19 @@
           </summary>
           <div style="margin-top: 0.75rem; margin-left: 0.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
             {% if site.author.mathgenealogy %}
-            <a href="{{ site.author.mathgenealogy }}" target="_blank" style="color: #006d77; text-decoration: none;">📚 MathGenealogy</a>
+            <a href="{{ site.author.mathgenealogy }}" target="_blank" style="color: #006d77; text-decoration: none;">
+              <span>📚</span> MathGenealogy
+            </a>
             {% endif %}
             {% if site.author.github %}
-            <a href="{{ site.author.github }}" target="_blank" style="color: #006d77; text-decoration: none;">🐙 GitHub</a>
+            <a href="{{ site.author.github }}" target="_blank" style="color: #006d77; text-decoration: none;">
+              <span>🐙</span> GitHub
+            </a>
             {% endif %}
             {% if site.author.orcid %}
-            <a href="{{ site.author.orcid }}" target="_blank" style="color: #006d77; text-decoration: none;">🆔 ORCID</a>
+            <a href="{{ site.author.orcid }}" target="_blank" style="color: #006d77; text-decoration: none;">
+              <span>🆔</span> ORCID
+            </a>
             {% endif %}
           </div>
         </details>
