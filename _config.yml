@@ -1,6 +1,6 @@
 title: "Mathematician & Computer Scientist"
 description: "Research at the intersection of formal methods, logic, and AI"
-url: "https://stefan-nugraha.github.io"
+url: "https://stefannug.github.io"
 baseurl: ""
 
 # Use GitHub's built-in theme as base
@@ -14,5 +14,5 @@ author:
   email: "nugraha@cs.cas.cz"
   avatar: "/assets/images/profile.jpg"
   mathgenealogy: "https://www.mathgenealogy.org/id.php?id=250372"
-  github: "https://github.com/stefan-nugraha"
+  github: "https://github.com/stefannug"
   orcid: "https://orcid.org/0000-0002-7139-4487"
