@@ -291,9 +291,13 @@
           <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="profile-img">
         {% endif %}
         <h2>{{ site.author.name }}</h2>
-        <p style="margin: -0.5rem 0 0.5rem 0;"><small><em>(Anggha Nugraha in official records)</em></small></p>
+        <!-- <p style="margin: -0.5rem 0 0.5rem 0;"><small><em>(Anggha Nugraha in official records)</em></small></p> -->
+        <p style="margin: -0.5rem 0 0.5rem 0;">
+          <small><em title="Anggha Nugraha appears on publications, degrees, and official documents" style="cursor: help; border-bottom: 1px dotted #bc6c25;">(Anggha Nugraha in official records)</em></small>
+        </p>
         <p class="title">{{ site.author.bio }}</p>
-        <p>📍 {{ site.author.location }}</p>
+        <!-- <p>📍 {{ site.author.location }}</p> -->
+        <p>{{ site.author.location }}</p>
         <p style="font-size: 0.85rem; color: #bc6c25; font-style: italic; margin-top: 0.8rem;">
           🌏 From the tropics to the Vltava — logic connects it all.
         </p>
