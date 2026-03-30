@@ -41,8 +41,3 @@ title: "About Me"
 - **PhD**: *Naive Infinitesimal Analysis* — University of Canterbury, 2019  
 - **MSc**: *Verification of Square Matrix Multiplication Algorithm using Hoare Logic* — University of Indonesia, 2012
 
-## CV
-
-📄 [Download my CV (PDF)](https://drive.google.com/file/d/136gD2bdMdrXHY9S0DJK1Wuqq734Z4-1E/view?usp=drive_link)
-
-
