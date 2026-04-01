@@ -5,7 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23e5e5e5'/%3E%3Ctext x='50' y='72' font-size='75' font-weight='bold' text-anchor='middle' fill='%23bc6c25'%3E⊢%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
  <style>
+   /* CSS Variables for Light/Dark Mode - Fixed */
+:root {
+    --bg-primary: #fef9e8;
+    --bg-secondary: #ffffff;
+    --text-primary: #2d3e50;
+    --text-secondary: #5a6e7c;
+    --accent-teal: #006d77;
+    --accent-terracotta: #bc6c25;
+    --accent-teal-light: rgba(0, 109, 119, 0.1);
+    --accent-terracotta-light: rgba(188, 108, 37, 0.1);
+    --border-light: rgba(0, 109, 119, 0.2);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Manual dark mode toggle support - THIS MUST COME AFTER :root */
+body.dark-mode {
+    --bg-primary: #1a1f2e;
+    --bg-secondary: #252b3b;
+    --text-primary: #e8e9f0;
+    --text-secondary: #a8b3c7;
+    --accent-teal: #4ecdc4;
+    --accent-terracotta: #f4a261;
+    --accent-teal-light: rgba(78, 205, 196, 0.15);
+    --accent-terracotta-light: rgba(244, 162, 97, 0.15);
+    --border-light: rgba(78, 205, 196, 0.25);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* System preference dark mode - also applies when no manual override */
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-mode):not(.light-mode) {
+        --bg-primary: #1a1f2e;
+        --bg-secondary: #252b3b;
+        --text-primary: #e8e9f0;
+        --text-secondary: #a8b3c7;
+        --accent-teal: #4ecdc4;
+        --accent-terracotta: #f4a261;
+        --accent-teal-light: rgba(78, 205, 196, 0.15);
+        --accent-terracotta-light: rgba(244, 162, 97, 0.15);
+        --border-light: rgba(78, 205, 196, 0.25);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    }
+}
   * {
     margin: 0;
     padding: 0;
@@ -13,11 +57,13 @@
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    color: #2d3e50;
-    background-color: #fef9e8;
-  }
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
   .container {
     max-width: 1100px;
@@ -26,40 +72,42 @@
   }
 
   /* Header */
-  header {
-    background: white;
-    border-bottom: 1px solid rgba(188, 108, 37, 0.2);
+ header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
     padding: 2rem 0;
     margin-bottom: 2rem;
-  }
-
+    transition: background-color 0.3s ease;
+}
   .header-content {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem;
     font-weight: 600;
-    color: #006d77;
+    color: var(--accent-teal);
     margin-bottom: 0.5rem;
-  }
+    letter-spacing: -0.01em;
+}
 
   .site-description {
     font-size: 1.1rem;
-    color: #5a6e7c;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
-  }
+}
 
   /* Gradient rule under title */
   .signature-rule {
     height: 3px;
     width: 80px;
-    background: linear-gradient(90deg, #006d77, #bc6c25);
+    background: linear-gradient(90deg, var(--accent-teal), var(--accent-terracotta));
     margin: 0.5rem 0 1.5rem 0;
     border: none;
-  }
+}
 
   nav {
     margin-top: 1rem;
@@ -68,15 +116,15 @@
   nav a {
     margin-right: 1.8rem;
     text-decoration: none;
-    color: #006d77;
+    color: var(--accent-teal);
     font-weight: 500;
-    transition: color 0.2s;
-  }
+    transition: all 0.2s ease;
+}
 
-  nav a:hover {
-    color: #bc6c25;
+nav a:hover {
+    color: var(--accent-terracotta);
     text-decoration: underline;
-  }
+}
 
   /* Main layout: two columns */
   .main-content {
@@ -86,16 +134,17 @@
   }
 
   /* Sidebar */
-  .sidebar {
+ .sidebar {
     flex: 0 0 280px;
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    border: 1px solid rgba(0, 109, 119, 0.15);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
     position: sticky;
     top: 2rem;
-  }
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
   .profile-img {
     width: 100%;
@@ -103,30 +152,30 @@
     border-radius: 50%;
     margin: 0 auto 1.5rem;
     display: block;
-    border: 3px solid rgba(0, 109, 119, 0.2);
+    border: 3px solid var(--border-light);
     object-fit: cover;
     object-position: 30% 50%;
-  }
+}
 
   .sidebar h2 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     border-bottom: none;
     padding-bottom: 0;
-    color: #006d77;
-  }
+    color: var(--accent-teal);
+}
 
   .sidebar p {
     font-size: 0.9rem;
-    color: #5a6e7c;
+    color: var(--text-secondary);
     margin-bottom: 0.8rem;
-  }
+}
 
   .sidebar .title {
     font-weight: 600;
-    color: #2d3e50;
+    color: var(--text-primary);
     margin-bottom: 1rem;
-  }
+}
 
   .sidebar .links {
     margin-top: 1.2rem;
@@ -136,12 +185,12 @@
     display: inline-block;
     margin-right: 1rem;
     font-size: 0.9rem;
-    color: #006d77;
-  }
+    color: var(--accent-teal);
+}
 
-  .sidebar .links a:hover {
-    color: #bc6c25;
-  }
+.sidebar .links a:hover {
+    color: var(--accent-terracotta);
+}
 
   /* Article content */
   article {
@@ -149,54 +198,105 @@
     min-width: 0;
   }
 
-  article h2 {
+article h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.8rem;
+    font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(188, 108, 37, 0.3);
-    color: #bc6c25;
-  }
+    border-bottom: 2px solid var(--accent-terracotta-light);
+    color: var(--accent-terracotta);
+    letter-spacing: -0.01em;
+}
 
   article h2:first-of-type {
     margin-top: 0;
   }
 
-  article h3 {
+article h3 {
     font-size: 1.3rem;
     margin: 1.2rem 0 0.8rem;
-    color: #006d77;
-  }
+    color: var(--accent-teal);
+}
 
   .publication {
     margin-bottom: 1.2rem;
-  }
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
 
-  .publication-title {
+.publication:hover {
+    border-left-color: var(--accent-terracotta);
+    background-color: var(--accent-terracotta-light);
+    transform: translateX(2px);
+}
+
+.publication-title {
     font-weight: 600;
-  }
+    color: var(--accent-teal);
+}
+
+/* External link indicator for publication titles */
+.publication-title a::after {
+    content: "🔗";
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    display: inline-block;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+}
+
+.publication-title a:hover::after {
+    opacity: 1;
+}
+
+/* Add publication metadata styling */
+.publication-authors, .publication-venue {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.publication-links {
+    margin-top: 0.3rem;
+}
+
+.publication-links a {
+    font-size: 0.8rem;
+    background: var(--accent-teal-light);
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.publication-title {
+    font-weight: 600;
+    color: var(--accent-teal);
+}
 
   /* Footer */
-  footer {
+ footer {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(188, 108, 37, 0.2);
+    border-top: 1px solid var(--border-light);
     text-align: center;
     font-size: 0.85rem;
-    color: #8a9aab;
-  }
+    color: var(--text-secondary);
+}
 
-  a {
-    color: #006d77;
+a {
+    color: var(--accent-teal);
     text-decoration: none;
-    transition: color 0.2s;
-  }
+    transition: all 0.2s ease;
+}
 
-  a:hover {
-    color: #bc6c25;
+a:hover {
+    color: var(--accent-terracotta);
     text-decoration: underline;
-  }
-
+}
   @media (max-width: 800px) {
     .main-content {
       flex-direction: column;
@@ -228,17 +328,7 @@
     margin-bottom: 1.2rem;
   }
 
-  /* Optional hover effect for publications */
-  .publication {
-    transition: border-left 0.1s ease, background-color 0.1s ease;
-    padding-left: 0.75rem;
-    border-left: 2px solid transparent;
-  }
-
-  .publication:hover {
-    border-left-color: #bc6c25;
-    background-color: rgba(188, 108, 37, 0.05);
-  }
+ 
    /* Dropdown with rotating chevron */
    details summary {
      display: flex;
@@ -265,6 +355,142 @@
    .sidebar details a {
      font-size: 0.85rem;
    }
+
+   /* Smooth scrolling */
+   html {
+     scroll-behavior: smooth;
+   }
+   /* Subtle fade-in animation for content */
+   .main-content {
+     animation: fadeIn 0.6s ease-out;
+   }
+   @keyframes fadeIn {
+     from {
+        opacity: 0;
+        transform: translateY(10px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+   /* Hover refinement for sidebar links */
+   .sidebar .links a, .sidebar details a {
+     transition: all 0.2s ease;
+     padding: 0.2rem 0;
+     }
+   .sidebar .links a:hover, .sidebar details a:hover {
+     transform: translateX(3px);
+     color: #bc6c25;
+     }
+/* Dark Mode Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    border-color: var(--accent-terracotta);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+   /* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-teal-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-teal);
+}
+
+/* Selection Styling */
+::selection {
+    background: var(--accent-terracotta-light);
+    color: var(--accent-terracotta);
+}
+
+/* Focus Outline for Accessibility */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent-terracotta);
+    outline-offset: 2px;
+}
+
+/* Back to Top Button - Enhanced Visibility */
+.back-to-top {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-terracotta);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+    color: var(--accent-terracotta);
+    box-shadow: var(--shadow-sm);
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    background: var(--accent-terracotta);
+    color: var(--bg-secondary);
+    border-color: var(--accent-terracotta);
+}
+
+.back-to-top.visible {
+    display: flex;
+}
+
+/* Improve code blocks (if any) */
+pre, code {
+    background: var(--accent-teal-light);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+   
  </style>
 </head>
 <body>
@@ -300,14 +526,15 @@
         <p class="title">{{ site.author.bio }}</p>
         <!-- <p>📍 {{ site.author.location }}</p> -->
         <p>{{ site.author.location }}</p>
-        <p style="font-size: 0.85rem; color: #bc6c25; font-style: italic; margin-top: 0.8rem;">
+        <!--<p style="font-size: 0.85rem; color: #bc6c25; font-style: italic; margin-top: 0.8rem; border-left: 2px solid #bc6c25; padding-left: 0.6rem;"> -->
+       <p style="font-size: 0.85rem; color: var(--accent-terracotta); font-style: italic; margin-top: 0.8rem;">
           🌏 From the tropics to the Vltava — logic connects it all.
         </p>
-        <p style="font-size: 0.85rem; color: #5a6e7c; margin-top: 0.5rem;">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
           ⚡ Definitely not the smartest in the room — just inquisitive about stuff, especially logic and mathematics.
         <p>📧 <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
         <details style="margin-top: 1rem;">
-          <summary style="color: #006d77; cursor: pointer; font-weight: 500; list-style: none;">
+          <summary style="color: var(--accent-teal); cursor: pointer; font-weight: 500; list-style: none;">
             <!-- <span style="display: inline-flex; align-items: center; gap: 0.3rem;">
               📁 Profiles
               <span style="font-size: 0.7rem;">▼</span>
@@ -317,7 +544,7 @@
           </summary>
           <div style="margin-top: 0.75rem; margin-left: 0.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
             {% if site.author.mathgenealogy %}
-            <a href="{{ site.author.mathgenealogy }}" target="_blank" style="color: #006d77; text-decoration: none;">
+           <a href="{{ site.author.mathgenealogy }}" target="_blank" style="color: var(--accent-teal); text-decoration: none;">
               <span>📚</span> MathGenealogy
             </a>
             {% endif %}
@@ -344,5 +571,61 @@
   <footer>
     <p>© {{ site.time | date: '%Y' }} Stefan Nugraha — Institute of Computer Science, Czech Academy of Sciences</p>
   </footer>
+  <!-- Dark Mode Toggle Script -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+        toggleButton.textContent = '☀️';
+    } else if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+        toggleButton.textContent = '🌙';
+    } else {
+        // No saved preference, check system
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) {
+            document.body.classList.add('dark-mode');
+            toggleButton.textContent = '☀️';
+        } else {
+            document.body.classList.add('light-mode');
+            toggleButton.textContent = '🌙';
+        }
+    }
+    
+    toggleButton.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+            toggleButton.textContent = '🌙';
+        } else {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            toggleButton.textContent = '☀️';
+        }
+    });
+</script>
+  <!-- Back to Top script -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+<script>
+    const backButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backButton.classList.add('visible');
+        } else {
+            backButton.classList.remove('visible');
+        }
+    });
+    backButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
