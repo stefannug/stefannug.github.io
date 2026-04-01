@@ -24,19 +24,60 @@ title: "About Me"
 
 ### Journal Articles & Preprints
 
-- Stefan Ratschan, Anggha Nugraha, Mikoláš Janota, Marek Dančo. [*Inductive Satisfiability Certification for Universal Quantifiers and Uninterpreted Function Symbols*](https://arxiv.org/abs/2602.16335). arXiv:2602.16335 [cs.LO], 2026. (submitted to IJCAR 2026)
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://arxiv.org/abs/2602.16335">Inductive Satisfiability Certification for Universal Quantifiers and Uninterpreted Function Symbols</a>
+  </div>
+  <div class="publication-authors">Stefan Ratschan, Anggha Nugraha, Mikoláš Janota, Marek Dančo</div>
+  <div class="publication-venue">arXiv:2602.16335 [cs.LO], 2026. (submitted to IJCAR 2026)</div>
+</div>
 
-- Anggha Nugraha, M. McKubre-Jordens, H. Diener. [*Naive Infinitesimal Analysis: Its Construction and Its Properties*](https://arxiv.org/abs/2009.11424). arXiv:2009.11424 [math.LO], 2020.
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://arxiv.org/abs/2009.11424">Naive Infinitesimal Analysis: Its Construction and Its Properties</a>
+  </div>
+  <div class="publication-authors">Anggha Nugraha, M. McKubre-Jordens, H. Diener</div>
+  <div class="publication-venue">arXiv:2009.11424 [math.LO], 2020</div>
+</div>
 
-- M. Arzaki and Anggha S. Nugraha. [*Translation of an Allen's Temporal Logic Variant to RPNL*](https://scik.org/index.php/jmcs/article/view/1254). Journal of Mathematical and Computational Science (3), 2013, pages 1405-1429.
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://scik.org/index.php/jmcs/article/view/1254">Translation of an Allen's Temporal Logic Variant to RPNL</a>
+  </div>
+  <div class="publication-authors">M. Arzaki and Anggha S. Nugraha</div>
+  <div class="publication-venue">Journal of Mathematical and Computational Science (3), 2013, pages 1405-1429</div>
+</div>
 
 ### Conference Proceedings
 
-- T. Antaresti, Anggha Nugraha, et al. [*Wavelet denoising and fractal feature selection for classifying simulated earthquake signals from mobile phone accelerometers*](https://ieeexplore.ieee.org/document/6808816). IEEE 11th International Multi-Conference on Systems, Signals and Devices, 2014.
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://ieeexplore.ieee.org/document/6808816">Wavelet denoising and fractal feature selection for classifying simulated earthquake signals from mobile phone accelerometers</a>
+  </div>
+  <div class="publication-authors">T. Antaresti, Anggha Nugraha, et al.</div>
+  <div class="publication-venue">IEEE 11th International Multi-Conference on Systems, Signals and Devices, 2014</div>
+</div>
 
-- A. S. Nugraha and T. Basaruddin. [*Analysis and Comparison of QR Decomposition Algorithms for Some Types of Matrix*](https://ieeexplore.ieee.org/document/6354470). Proceedings of Federated Conference on Computer Science and Information System, 2012, pages 561-565.
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://ieeexplore.ieee.org/document/6354470">Analysis and Comparison of QR Decomposition Algorithms for Some Types of Matrix</a>
+  </div>
+  <div class="publication-authors">A. S. Nugraha and T. Basaruddin</div>
+  <div class="publication-venue">Proceedings of Federated Conference on Computer Science and Information System, 2012, pages 561-565</div>
+</div>
 
 ### Theses
 
-- **PhD**: *Naive Infinitesimal Analysis* — University of Canterbury, 2019  
-- **MSc**: *Verification of Square Matrix Multiplication Algorithm using Hoare Logic* — University of Indonesia, 2012
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://ir.canterbury.ac.nz/items/8424141d-9893-45e4-9fe8-92e76f3d0cc9">PhD: Naive Infinitesimal Analysis</a>
+  </div>
+  <div class="publication-venue">University of Canterbury, 2019</div>
+</div>
+
+<div class="publication">
+  <div class="publication-title">
+    <a href="https://lontar.cs.ui.ac.id/Lontar/opac/themes/newui/detail.jsp?id=37722&lokasi=lokal">MSc: Verification of Square Matrix Multiplication Algorithm using Hoare Logic</a>
+  </div>
+  <div class="publication-venue">University of Indonesia, 2012</div>
+</div>
