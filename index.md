@@ -4,21 +4,21 @@ title: "About Me"
 ---
 
 <div class="bio">
-<p>I'm a mathematician and computer scientist based in Prague. My research lives at the crossroads of logic, formal methods, and AI.</p>
+<p>I'm a researcher in formal reasoning based in Prague. My research lives at the crossroads of logic, formal methods, and automated reasoning. I have growing interests in AI-assisted theorem proving and machine learning for formal reasoning.</p>
 
-<p>I did my PhD in Mathematics at the University of Canterbury (New Zealand), where I worked on non-classical logic and infinitesimal analysis. I also have an MSc in Computer Science from the University of Indonesia, where I fell in love with formal verification (Hoare logic, specifically).</p>
+<p>I completed my PhD in Mathematics at the University of Canterbury (New Zealand), where I worked on non-classical logic and infinitesimal analysis. I also hold an MSc in Computer Science from the University of Indonesia, where I was introduced to formal verification through Hoare logic.</p>
 
-<p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and I'm pursuing a second PhD at ČVUT with doc. Dr. Stefan Ratschan, digging into automated reasoning and SMT solvers.</p>
+<p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and pursuing a second PhD at ČVUT under the supervision of Stefan Ratschan, digging into formal verification, SMT solvers, and automated reasoning. I am particularly interested in how ideas from logic, mathematics, and computer science can be combined to build reliable methods for reasoning about complex systems.</p>
 
-<p><em>I grew up in Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between Prague and wherever my curiosity takes me: whether that's chasing new research ideas or simply making new connections.</em></p>
+<p><em>Originally from Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between Prague and wherever my curiosity takes me: whether that's chasing new research ideas or simply making new connections.</em></p>
 </div>
 
 ## Research Interests
 
-- Mathematical Logic (Non-Classical, Constructive)
-- Formal Verification & Proof Assistants
 - Automated Reasoning & SMT Solvers, with their applications
-- AI for Mathematics (LLMs, Autoformalisation)
+- Formal Verification & Proof Assistants
+- Mathematical Logic (Classical, Non-Classical, Constructive)
+- AI for Mathematics
 
 ## Publications
 
