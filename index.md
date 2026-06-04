@@ -4,11 +4,11 @@ title: "About Me"
 ---
 
 <div class="bio">
-<p>I'm a researcher in formal reasoning based in Prague. My research lives at the crossroads of logic, formal methods and automated reasoning, with a particular interest in SMT solving and methods for reasoning about complex systems.</p>
+<p>I'm a researcher based in Prague whose current work focuses on SMT solving, satisfiability certification, and formal verification. These areas sit where logic, mathematics and computer science meet, continuing to shape my research interests.</p>
 
-<p>I completed my PhD in Mathematics at the University of Canterbury (New Zealand), where I worked on non-classical logic and infinitesimal analysis. I also hold an MSc in Computer Science from the University of Indonesia, where I was introduced to formal verification through Hoare logic.</p>
+<p>I completed my PhD in Mathematics at the University of Canterbury (New Zealand), where I worked on non-classical logic and infinitesimal analysis. I also hold an MSc in Computer Science from the University of Indonesia, where I was first introduced to formal verification through Hoare logic.</p>
 
-<p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and pursuing a second PhD at ČVUT under the supervision of Stefan Ratschan, digging into formal verification, SMT solvers, and automated reasoning. I am particularly interested in how ideas from logic, mathematics, and computer science can be combined to build reliable methods for reasoning about complex systems.</p>
+<p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and pursuing a second PhD at ČVUT under the supervision of Stefan Ratschan. More broadly, I am interested in how ideas from logic, theorem proving and computer science can be combined for solving computational problems.</p>
 
 <p><em>I am originally from Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between research and wherever my curiosity takes me &ndash; whether that's chasing new ideas, exploring unfamiliar topics, or simply making new connections.</em></p>
 </div>
@@ -19,7 +19,7 @@ title: "About Me"
 - Formal Verification
 - Mathematical Logic (Classical, Non-Classical, Constructive)
 - Theorem Proving & Formalised Mathematics
-- AI for Mathematics
+- AI for Formal Reasoning 
 
 ## Publications
 
