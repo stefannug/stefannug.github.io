@@ -10,7 +10,7 @@ title: "About Me"
 
 <p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and pursuing a second PhD at ČVUT under the supervision of Stefan Ratschan. More broadly, I am interested in how ideas from logic, theorem proving and computer science can be combined for solving computational problems. My work is motivated by a desire to understand underlying mathematical structure and connect it to effective computational reasoning, bridging mathematical foundations and practical reasoning systems.</p>
 
-<p><em>I am originally from Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between research and wherever my curiosity takes me — whether that's chasing new ideas, exploring unfamiliar topics, or simply making new connections.</em></p>
+<p><em>I am originally from <a href="https://www.britannica.com/place/Indonesia"> Indonesia </a>, where I first got hooked on the elegance of mathematics. These days, I split my time between research and wherever my curiosity takes me — whether that's chasing new ideas, exploring unfamiliar topics, or simply making new connections.</em></p>
 </div>
 
 ## Research Interests
