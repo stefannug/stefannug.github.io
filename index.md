@@ -4,20 +4,21 @@ title: "About Me"
 ---
 
 <div class="bio">
-<p>I'm a researcher in formal reasoning based in Prague. My research lives at the crossroads of logic, formal methods, and automated reasoning. I have growing interests in AI-assisted theorem proving and machine learning for formal reasoning.</p>
+<p>I'm a researcher in formal reasoning based in Prague. My research lives at the crossroads of logic, formal methods and automated reasoning, with a particular interest in SMT solving and methods for reasoning about complex systems.</p>
 
 <p>I completed my PhD in Mathematics at the University of Canterbury (New Zealand), where I worked on non-classical logic and infinitesimal analysis. I also hold an MSc in Computer Science from the University of Indonesia, where I was introduced to formal verification through Hoare logic.</p>
 
 <p>Currently, I'm an <strong>Associate Scientist</strong> at the Institute of Computer Science, Czech Academy of Sciences, and pursuing a second PhD at ČVUT under the supervision of Stefan Ratschan, digging into formal verification, SMT solvers, and automated reasoning. I am particularly interested in how ideas from logic, mathematics, and computer science can be combined to build reliable methods for reasoning about complex systems.</p>
 
-<p><em>Originally from Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between Prague and wherever my curiosity takes me: whether that's chasing new research ideas or simply making new connections.</em></p>
+<p><em>I am originally from Indonesia, where I first got hooked on the elegance of mathematics. These days, I split my time between research and wherever my curiosity takes me &ndash; whether that's chasing new ideas, exploring unfamiliar topics, or simply making new connections.</em></p>
 </div>
 
 ## Research Interests
 
-- Automated Reasoning & SMT Solvers, with their applications
-- Formal Verification & Proof Assistants
+- Automated Reasoning & SMT Solving
+- Formal Verification
 - Mathematical Logic (Classical, Non-Classical, Constructive)
+- Theorem Proving & Formalised Mathematics
 - AI for Mathematics
 
 ## Publications
