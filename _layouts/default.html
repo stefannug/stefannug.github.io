@@ -7,22 +7,9 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23e5e5e5'/%3E%3Ctext x='50' y='72' font-size='75' font-weight='bold' text-anchor='middle' fill='%23bc6c25'%3E⊢%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
  <style>
-   /* CSS Variables for Light/Dark Mode - Fixed */
+/* CSS Variables for Light/Dark Mode - DARK MODE BY DEFAULT */
 :root {
-    --bg-primary: #fef9e8;
-    --bg-secondary: #ffffff;
-    --text-primary: #2d3e50;
-    --text-secondary: #5a6e7c;
-    --accent-teal: #006d77;
-    --accent-terracotta: #bc6c25;
-    --accent-teal-light: rgba(0, 109, 119, 0.1);
-    --accent-terracotta-light: rgba(188, 108, 37, 0.1);
-    --border-light: rgba(0, 109, 119, 0.2);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* Manual dark mode toggle support - THIS MUST COME AFTER :root */
-body.dark-mode {
+    color-scheme: dark; /* Signals the browser layout to use dark styles */
     --bg-primary: #1a1f2e;
     --bg-secondary: #252b3b;
     --text-primary: #e8e9f0;
@@ -35,19 +22,34 @@ body.dark-mode {
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* System preference dark mode - also applies when no manual override */
-@media (prefers-color-scheme: dark) {
+/* Manual light mode toggle support (if you use a JavaScript button) */
+body.light-mode {
+    color-scheme: light;
+    --bg-primary: #fef9e8;
+    --bg-secondary: #ffffff;
+    --text-primary: #2d3e50;
+    --text-secondary: #5a6e7c;
+    --accent-teal: #006d77;
+    --accent-terracotta: #bc6c25;
+    --accent-teal-light: rgba(0, 109, 119, 0.1);
+    --accent-terracotta-light: rgba(188, 108, 37, 0.1);
+    --border-light: rgba(0, 109, 119, 0.2);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* System preference light mode - applies only if visitor prefers light and has no manual toggle override */
+@media (prefers-color-scheme: light) {
     body:not(.dark-mode):not(.light-mode) {
-        --bg-primary: #1a1f2e;
-        --bg-secondary: #252b3b;
-        --text-primary: #e8e9f0;
-        --text-secondary: #a8b3c7;
-        --accent-teal: #4ecdc4;
-        --accent-terracotta: #f4a261;
-        --accent-teal-light: rgba(78, 205, 196, 0.15);
-        --accent-terracotta-light: rgba(244, 162, 97, 0.15);
-        --border-light: rgba(78, 205, 196, 0.25);
-        --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+        --bg-primary: #fef9e8;
+        --bg-secondary: #ffffff;
+        --text-primary: #2d3e50;
+        --text-secondary: #5a6e7c;
+        --accent-teal: #006d77;
+        --accent-terracotta: #bc6c25;
+        --accent-teal-light: rgba(0, 109, 119, 0.1);
+        --accent-terracotta-light: rgba(188, 108, 37, 0.1);
+        --border-light: rgba(0, 109, 119, 0.2);
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
     }
 }
   * {
