@@ -27,10 +27,21 @@ title: "About Me"
 
 <div class="publication">
   <div class="publication-title">
+    <a href="http://arxiv.org/abs/2607.08206">A Constructive Field of Infinitesimals: Chunk and Permeate Approach</a>
+  </div>
+  <div class="publication-authors">Anggha Nugraha</div>
+  <div class="publication-venue">
+    Submitted to <em>Bulletin of the Section of Logic</em>. arXiv:2607.08206 [math.LO], 2026.
+    <br><small style="color: #666;">*Note: This is an updated, comprehensive version that expands upon and supersedes the 2020 preprint (arXiv:2009.11424) and PhD thesis.*</small>
+  </div>
+</div>
+
+<div class="publication">
+  <div class="publication-title">
     <a href="https://arxiv.org/abs/2602.16335">Inductive Satisfiability Certification for Universal Quantifiers and Uninterpreted Function Symbols</a>
   </div>
   <div class="publication-authors">Stefan Ratschan, Anggha Nugraha, Mikoláš Janota, Marek Dančo</div>
-  <div class="publication-venue">arXiv:2602.16335 [cs.LO], 2026. (submitted to IJCAR 2026)</div>
+  <div class="publication-venue">arXiv:2602.16335 [cs.LO], 2026.</div>
 </div>
 
 <div class="publication">
@@ -38,7 +49,10 @@ title: "About Me"
     <a href="https://arxiv.org/abs/2009.11424">Naive Infinitesimal Analysis: Its Construction and Its Properties</a>
   </div>
   <div class="publication-authors">Anggha Nugraha, M. McKubre-Jordens, H. Diener</div>
-  <div class="publication-venue">arXiv:2009.11424 [math.LO], 2020</div>
+  <div class="publication-venue">
+    arXiv:2009.11424 [math.LO], 2020.
+    <br><small style="color: #666;">*Note: This early version has been expanded and superseded by the 2026 paper listed above.*</small>
+  </div>
 </div>
 
 <div class="publication">
