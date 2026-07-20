@@ -1,0 +1,303 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LuxSleek-CV 1.1 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% 1.1: added tracking and letter-spacing for prettier lower caps, added `~` for language levels
+% 1.0: initial release
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED, and never should be.*
+%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\usepackage{amsmath}
+
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{cvblue}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\large Anggha (Stefan) \textbf{\textsc{Nugraha}} \normalsize 
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.65\textwidth]{profile.jpg}\hfill\null
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\headleft{Profile Summary}
+Researcher in formal reasoning with a background in mathematics \& computer science. My current research focuses on automated reasoning, SMT solving, and formal verification, particularly satisfiability certification for quantified formulas. More broadly, I am interested in the connections between mathematical logic, theorem proving, and automated methods for solving computational problems. 
+% I am pursuing a PhD at ČVUT while working as a researcher at the Institute of Computer Science, Czech Academy of Sciences.
+
+\headleft{Contact details}
+\small % To fit more content
+\MVAt\ {\small nugraha@cs.cas.cz} \\[0.4ex]
+\Mobilefone\ +420\,735\,026\,408\\[0.5ex]
+% \Letter\ XXXXXXXXXXXXX
+\normalsize
+
+\headleft{Research Interest}
+%Year of birth: \textbf{1861} \\[0.5ex]
+% Citizenship: \textbf{Indian} \\[0.5ex]
+% Family: \textbf{Married with children} \\[0.5ex]
+% Languages: \textbf{English}, \textbf{Hindi}, 
+% \textbf{Telugu}
+• Formal Verification\\[0.5ex]
+• Automated Reasoning\\[0.5ex]
+• Theorem Proving\\[0.5ex]
+• Logical Foundations of\\\hspace{0.5ex} Computation\\[0.5ex]
+• Formalised Mathematics\\[0.5ex]
+• Foundations of Mathematics\\[0.5ex]
+• Philosophical logic
+
+\headleft{Technical Skills}
+% \begin{itemize}
+% \item Language: Bahasa Indonesia, English,
+% \item Programming: Python (developing), Java, C
+% \item Scientific Computing: Maple, Matlab
+% \item Typesetting: LaTeX
+
+% \end{itemize} 
+• Language: Bahasa Indonesia,\\\hspace{0.5ex} English\\[0.5ex]
+• Programming: Python \\\hspace{0.5ex} (developing), Java, C\\[0.5ex]
+• Scientific Computing: Maple, \\\hspace{0.5ex} Matlab\\[0.5ex]
+• Typesetting: LaTeX
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{Experience}
+
+\textsc{Vědecký asistent (Senior Research Assistant)}\\ \textit{Institute of Computer Science,\\Czech Academy of Sciences.}  \dates{08.09.2025--present} 
+
+\smaller{Member of the Department of Artificial Intelligence. Research involving automated reasoning, SMT solvers, and AI methods. Currently pursuing a second PhD in related areas.}
+
+% \is
+% \smaller{Conducted exploratory data analysis to identify patterns, trends, and insights using statistical methods and data visualization techniques to support business decisions.}
+
+\bigskip
+\textsc{Lecturer (Assistant Professorial Fellow 5)}\\ \textit{Institute of Mathematics\\The University of Philippines--Diliman}  \dates{01.08.2024--31.07.2025}
+
+\smaller{Deliver undergraduate lectures and exams and prepare teaching materials.}
+
+\bigskip
+\textsc{Career Interruption}  \dates{2019--2024}
+
+\smaller{Academic career break devoted to religious vocation \& monastic formation.}
+
+\bigskip
+\textsc{Tutor}\\ \textit{School of Mathematics \& Statistics\\ University of Canterbury, NZ}  \dates{2015--2018}
+
+\smaller{Leading tutorial classes (about 20 students in one class), marking exams, proctor for quizzes and exams.}
+
+\bigskip
+\textsc{Lecturer and Researcher}\\ \textit{Faculty of Computer Science\\University of Indonesia}  \dates{2012--2014}
+
+\smaller{Prepare and give classes on the subjects assigned by the Dean, make and mark exams, manage some teaching assistants, member of Formal Methods in Software Engineering lab.}
+
+
+
+\headright{Education}
+
+\textsc{PhD in Computer Science.}\\
+\textit{Czech Technical University (ČVUT)}. \dates{2025--present}
+
+\is
+\textsc{PhD in Mathematics.}\\
+\textit{University of Canterbury (NZ)}.  \dates{2014--2019}
+
+\is
+\textsc{Master of Computer Science.}\\
+\textit{University of Indonesia}.  \dates{2011--2012}
+
+\is
+\textsc{Bachelor of Science in Mathematics}\\
+\textit{University of Indonesia}.  \dates{2006--2009}
+
+\headright{Publications}
+
+\begin{enumerate}
+    \item Anggha Nugraha.
+    \href{https://arxiv.org/abs/2607.15723}{\textit{Paraconsistent Dominated Convergence}}. In arXiv:2607.15723 [math.LO], 2026.
+    \item Anggha Nugraha. \href{http://arxiv.org/abs/2607.08206}{\textit{A Constructive Field of Infinitesimals: Chunk and Permeate Approach.}}$^{1}$ In arXiv:2607.08206 [math.LO], 2026.
+    \item Stefan Ratschan, Anggha Nugraha, Mikoláš Janota, Marek Dančo. \href{https://arxiv.org/abs/2602.16335}{\textit{Inductive Satisfiability Certification for Universal Quantifiers and Uninterpreted Function Symbols}}. In arXiv:2602.16335 [cs.LO], 2026. 
+    \item Anggha Nugraha, M. McKubre-Jordens, and H. Diener. \href{https://arxiv.org/abs/2009.11424}{\textit{Naïve Infinitesimal Analysis: Its Construction and Its Properties}}. In arXiv.2009.11424 [math.LO], 2020.
+\end{enumerate}
+
+
+
+% \smaller{\textsc{Introduction to Data Analysis using Microsoft Excel,}} \textit{Coursera.} \\
+% \is
+% \smaller{\textsc{Data Analysis With Python,Cognitive Class DA0101EN,} \textit{provided by IBM.}} \dates{July-3-2024} \\
+
+% \headright{Hobbies}
+
+% \textit{Listening Music, Playing Cricket}
+\end{minipage}
+
+
+
+
+
+
+
+% ===== Second page =====
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+
+
+
+\vspace*{0.5ex} % Extra space after the picture
+
+
+
+% \headleft{Technical Skills}
+\textcolor{cvblue!90}{Typesetting: LaTeX}
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{4ex}
+
+\begin{enumerate}\setcounter{enumi}{4}
+    \item T. Antaresti, Anggha Nugraha, et al. \href{https://ieeexplore.ieee.org/document/6808816} {\textit{Wavelet denoising and fractal feature selection for classifying simulated earthquake signals from mobile phone accelerometers}}. In IEEE 11 $^\text{th}$ International Multi-Conference on Systems, Signals \& Devices (SSD 14), 2014.
+    \item M. Arzaki and Anggha S. Nugraha. \href{https://scik.org/index.php/jmcs/article/view/1254}{\textit{Translation of an Allen’s Temporal Logic Variant to RPNL}}. In Journal of Mathematical and Computational Science (3), 2013, pages 1405-1429. 
+    \item A. S. Nugraha and T. Basaruddin. \href{https://ieeexplore.ieee.org/document/6354470}{\textit{Analysis and Comparison of QR Decomposition Algorithms for Some Types of Matrix}}. In Proceedings of  Federated Conference on Computer Science and Information System (FedCSIS), 2012, pages 561-565.
+\end{enumerate}
+
+\headright{Conferences and Talks}
+
+\smaller{New Zealand Mathematics and Statistics Postgraduate Conference. Auckland, New Zealand in 2014, 2017, and 2018}
+
+\is
+\smaller{Various informal talks in The Netherlands (especially at the University of Amsterdam) when doing research collaboration with Prof. Jan Bergstra in The Netherlands in 2016}
+
+\is
+\smaller{7$^\text{th}$ Non-Classical Logic: Theory and Applications conferencein Toruń, Poland in 2015}
+
+\is
+\smaller{1$^\text{st}$ National Joint Seminar in Mathematics at the University of Indonesia in 2010, \textit{The Generating Function Applications for Counting The Number of Pattern Graph from Main Pattern Graph}.}
+
+
+\headright{Grants and Scholarships}
+\smaller{LPDP Scholarship from the Ministry of Finance of The Republic of Indonesia 2014-2019}\\
+Scholarship to do my PhD study at the University of Canterbury, NZ.
+
+\smaller{The New Zealand Mathematical Society (NZMS) Travel Grant 2016}\\
+Travel grant to do research collaboration with Prof. Jan Bergstra of the University of Amsterdam, The Netherlands. 
+
+\smaller{The New Zealand Mathematical Society (NZMS) Travel Grant 2015}\\
+Travel grant to present my paper at ``The 7$^\text{th}$ Conference on Non-Classical Logic:  Theory and Application'' in Poland. 
+
+\smaller{IMHERE (Indonesia Managing Higher Education for Relevance and Efficiency) Scholarship for Master Study 2011-2012}
+
+
+\headright{References}
+
+\begin{enumerate}
+    \item doc. Dipl.Ing. Stefan Ratschan, Dr.-tech. \\Institute of Computer Science, Czech Academy of Sciences\\
+    \href{mailto:stefan.ratschan@cs.cas.cz}{stefan.ratschan@cs.cas.cz}
+    \item Dr. Maarten McKubre-Jordens\\
+    School of Mathematics and Statistics University of Canterbury\\
+    \href{mailto:mkm@papanui.school.nz}{mkm@papanui.school.nz}
+    \item Prof. Dr. Kiki Ariyanti Sugeng\\
+    Department of Mathematics University of Indonesia\\
+    \href{mailto:kiki@sci.ui.ac.id}{kiki@sci.ui.ac.id}
+    \item Phillipa Gourdie (Senior Tutor)\\
+    School of Mathematics and Statistics University of Canterbury\\
+    \href{mailto:phillipa.gourdie@canterbury.ac.nz}{phillipa.gourdie@canterbury.ac.nz}
+
+\end{enumerate}
+
+\end{minipage}
+
+\end{document}
