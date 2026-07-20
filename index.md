@@ -27,8 +27,19 @@ title: "About Me"
 
 <div class="publication">
   <div class="publication-title">
-    <a href="http://arxiv.org/abs/2607.08206">A Constructive Field of Infinitesimals: Chunk and Permeate Approach</a>
+    <a href="https://arxiv.org/abs/2607.15723">Paraconsistent Dominated Convergence</a>
+  </div> 
+  <div class="publication-authors">Anggha Nugraha</div>
+  <div class="publication-venue">
+    Submitted to <em>The Australasian Journal of Logic</em>. arXiv:2607.15723 [math.LO], 2026.
+    <!-- <br><small style="color: #666;">*Note: This is an updated, comprehensive version that expands upon and supersedes the 2020 preprint (arXiv:2009.11424) and PhD thesis.*</small> -->
   </div>
+</div>
+
+<div class="publication">
+  <div class="publication-title">
+    <a href="http://arxiv.org/abs/2607.08206">A Constructive Field of Infinitesimals: Chunk and Permeate Approach</a>
+  </div> 
   <div class="publication-authors">Anggha Nugraha</div>
   <div class="publication-venue">
     Submitted to <em>Bulletin of the Section of Logic</em>. arXiv:2607.08206 [math.LO], 2026.
